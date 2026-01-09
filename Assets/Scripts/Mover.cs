@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.SocialPlatforms.GameCenter;
 
 public class Mover : MonoBehaviour
 {
 
-    public float speed = 0.01f;
+    public Camera gameCamera;
+
+    public float speed = 0.05f;
     public float xMax = 10f;
     public float xMin = 10f;
 
@@ -16,20 +19,20 @@ public class Mover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 moverPosition = gameCamera.WorldToScreenPoint(transform.position);
 
 
+        print(Screen.width);
 
-        
-        if (transform.position.x > xMax) {
 
-            speed = 0.01f;
+        if (moverPosition.x > Screen.width) {
+
             speed *= -1;
         
         }
 
-        if(transform.position.x < xMin) {
+        if(moverPosition.x < Screen.width - Screen.width) {
 
-            speed = -0.01f;
             speed *= -1; 
         }
 
