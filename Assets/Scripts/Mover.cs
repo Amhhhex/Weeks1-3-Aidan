@@ -17,7 +17,6 @@ public class Mover : MonoBehaviour
     void Update()
     {
 
-        speed *= 0.001f;
 
 
         
