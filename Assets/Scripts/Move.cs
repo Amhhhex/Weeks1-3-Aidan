@@ -10,17 +10,11 @@ public class Move : MonoBehaviour
 
     public Vector3 screenPosition;
 
-
-
-
     public Camera gameCamera;
-
-
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
 
 
     }
